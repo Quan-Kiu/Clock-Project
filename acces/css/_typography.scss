@@ -1,21 +1,19 @@
-.wrapper{
-position: relative;
-max-width: 144rem;
-margin: 0 auto;
-min-height: 100vh;
-
-
+.wrapper {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto;
+  min-height: 100vh;
 }
-.container{
-    position: relative;
-    max-width: 96.8rem + 6rem;
-    padding: 3rem;
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-   
-   
+.container {
+  position: relative;
+  max-width: 96.8rem + 6rem;
+  padding: 3rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: $background-color;
 }

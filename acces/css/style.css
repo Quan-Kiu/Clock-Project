@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: #ececf3;
+  background-color: #730dda;
   font-family: "Poppins", sans-serif;
   color: #4f4f64;
 }
@@ -46,12 +46,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  background-color: #ececf3;
 }
 
 h1 {
@@ -93,8 +95,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
   background-color: #e9e9f1;
 }
@@ -104,8 +106,8 @@ p {
   position: absolute;
   width: 200%;
   height: 200%;
-  top: 30rem;
-  opacity: .7;
+  top: 25rem;
+  opacity: 0.7;
 }
 
 .clock__content::before {
@@ -178,28 +180,51 @@ p {
   }
 }
 
+.clock__content .clock__icon {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  right: 10rem;
+  -webkit-animation: fadeIn 1s ease forwards;
+          animation: fadeIn 1s ease forwards;
+}
+
+.clock__content .clock__icon i {
+  font-size: 5rem;
+}
+
+.clock__content .clock__icon #sun {
+  color: #f5db66;
+  display: none;
+}
+
+.clock__content .clock__icon #moon {
+  display: none;
+  color: #3b3bbf;
+}
+
 .clock__content .clock__rounder {
   position: absolute;
-  -webkit-transition: .5;
-  transition: .5;
+  -webkit-transition: 0.5;
+  transition: 0.5;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   background-color: #3b3bbf;
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
 .clock__content .clock__number--even {
-  -webkit-transition: .5;
-  transition: .5;
+  -webkit-transition: 0.5;
+  transition: 0.5;
   position: absolute;
-  width: .2rem;
+  width: 0.2rem;
   height: 3rem;
   background-color: #000;
   top: 1rem;
-  opacity: .7;
+  opacity: 0.7;
   -webkit-box-shadow: 0 35rem 0 #000;
           box-shadow: 0 35rem 0 #000;
   -webkit-transform-origin: center;
@@ -223,14 +248,14 @@ p {
 }
 
 .clock__content .clock__number--odd {
-  -webkit-transition: .5;
-  transition: .5;
+  -webkit-transition: 0.5;
+  transition: 0.5;
   position: absolute;
   width: 3rem;
-  height: .2rem;
+  height: 0.2rem;
   background-color: #000;
   left: 1rem;
-  opacity: .7;
+  opacity: 0.7;
   -webkit-box-shadow: 35rem 0 0 #000;
           box-shadow: 35rem 0 0 #000;
   -webkit-transform-origin: center;
@@ -260,9 +285,9 @@ p {
 }
 
 .clock__content .clock__hour {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
-  width: .8rem;
+  width: 0.8rem;
   height: 7rem;
   background-color: #3b3bbf;
   -webkit-transform-origin: top;
@@ -273,8 +298,9 @@ p {
 }
 
 .clock__content .clock__minutes {
+  z-index: 1;
   position: absolute;
-  width: .7rem;
+  width: 0.7rem;
   height: 10rem;
   background-color: #000;
   -webkit-transform-origin: top;
@@ -285,8 +311,9 @@ p {
 }
 
 .clock__content .clock__seconds {
+  z-index: 1;
   position: absolute;
-  width: .5rem;
+  width: 0.5rem;
   height: 12rem;
   background-color: #000;
   -webkit-transform-origin: top;
@@ -296,5 +323,30 @@ p {
   border-radius: 1rem;
   -webkit-box-shadow: 0 -3rem 0 #000;
           box-shadow: 0 -3rem 0 #000;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 20rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 20rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .clock__content {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 /*# sourceMappingURL=style.css.map */

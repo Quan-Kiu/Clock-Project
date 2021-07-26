@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock Project</title>
-    <link rel="stylesheet" href="./acces/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./acces/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="wrapper">
-        <section class="clock container">
-            
-           
-            <div class="clock__content">
+      <section class="clock container">
+        <div class="clock__content">
+          <div class="clock__circle">
+            <div class="clock__rounder"></div>
 
-               
+            <span class="clock__number--even"></span>
 
-                <div class="clock__circle">
+            <span class="clock__number--odd"></span>
 
-                    <div class="clock__rounder"></div>
+            <div class="clock__hour" id="hour"></div>
 
-                    <span class="clock__number--even"></span>
+            <div class="clock__minutes" id="minutes"></div>
 
-                    <span class="clock__number--odd"></span>
+            <div class="clock__seconds" id="seconds"></div>
+          </div>
 
-                    <div class="clock__hour" id="hour"></div>
+          <div class="clock__icon">
+            <i class="fas fa-sun" id="sun"></i>
+            <i class="fas fa-moon" id="moon"></i>
+          </div>
+        </div>
 
-                    <div class="clock__minutes" id="minutes"></div>
+        <div class="clock__text">
+          <h1 id="times-text"></h1>
 
-                    <div class="clock__seconds" id="seconds"></div>
+          <p id="date-text">13/12/2001</p>
+        </div>
 
-                </div>
-
-                
-            </div>
-
-            <div class="clock__text">
-                  <h1 id="times-text"></h1>
-                
-
-                  <p id="date-text">13/12/2001</p>
-            </div>
-
-
-        </section>
-        
-       
+        <p>I'm Quan</p>
+      </section>
     </div>
-    
-</body>
+  </body>
 
-<script src="./acces/js/main.js"></script>
+  <script src="./acces/js/main.js"></script>
 </html>

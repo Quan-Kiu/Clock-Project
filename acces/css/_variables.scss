@@ -1,22 +1,20 @@
 /*=============== GOOGLE FONTS ===============*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-$primary-font: 'Poppins', sans-serif;
+$primary-font: "Poppins", sans-serif;
 
 /*========== Colors ==========*/
 
-
 $hue-color: 240;
 
-$first-color: hsl($hue-color,53%, 49%);
-$title-color: hsl($hue-color,53%, 15%);
-$text-color: hsl($hue-color,12%, 35%);
+$first-color: hsl($hue-color, 53%, 49%);
+$title-color: hsl($hue-color, 53%, 15%);
+$text-color: hsl($hue-color, 12%, 35%);
 $text-color-light: hsl($hue-color, 12%, 65%);
 $white-color: #fff;
 $black-color: #000;
-$background-color: hsl($hue-color,24%, 94%);
-
+$background-color: hsl($hue-color, 24%, 94%);
 
 /*========== Font and typography ==========*/
 
