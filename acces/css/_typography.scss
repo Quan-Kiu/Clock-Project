@@ -1,0 +1,21 @@
+.wrapper{
+position: relative;
+max-width: 144rem;
+margin: 0 auto;
+
+
+}
+
+.container{
+    position: relative;
+    max-width: 96.8rem + 6rem;
+    padding: 3rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+   
+}

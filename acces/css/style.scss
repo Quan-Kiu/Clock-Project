@@ -1,0 +1,211 @@
+@import "variables";
+
+@import "reset";
+
+@import"global";
+
+@import "typography";
+
+
+
+// Layout
+
+
+h1{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: $biggest-font-size;
+    color: $title-color;
+    font-weight: 700;
+}
+
+p{
+    font-size: $medium-font-size;
+}
+
+
+.clock__text{
+    user-select: none;
+}
+
+.clock__content{
+    user-select: none;
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+
+    box-shadow: -0.6rem -0.6rem 1.6rem $white-color, 0.6rem 0.6rem 1.6rem hsla($hue-color,30%,86%,1),
+    inset 0.6rem 0.6rem 1.6rem hsla($hue-color,30%,86%,1),
+    inset -0.6rem -0.6rem 1.6rem $white-color;
+
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+    overflow: hidden;
+
+    background-color: hsl($hue-color,24%, 93%);
+
+    &::before,&::after{
+        content: "";
+        position: absolute;
+         width: 200%; 
+         height: 200%;
+         top: 30rem;
+         opacity: .7;
+         
+         
+
+    }
+
+    &::before{
+        border-radius: 35%;
+        background-color: #0099ffb7;
+        animation: rotewater 15s ease-out infinite;
+    }
+
+    &::after{
+        border-radius: 37%;
+        background-color: #0099f0;
+        animation: rotewater 10s ease-out infinite;
+    }
+
+
+@keyframes rotewater{
+    0%{
+        transform: rotate(0);
+        top: 30rem;
+    }
+
+    25%{
+        transform: rotate(180deg);
+        top: 32rem;
+    }
+    50%{
+        transform: rotate(360deg);
+        top: 35rem;
+    }
+    75%{
+        transform: rotate(180deg);
+        top: 33rem;
+    }
+    100%{
+        transform: rotate(0);
+        top: 31rem;
+    }
+
+}
+
+
+    .clock__rounder{
+        position: absolute;
+        transition: .5;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $first-color;
+        transform: translate(-50%,-50%) scale(.9);
+        z-index: $z-tooltip;
+    
+    }
+    
+    .clock__number--even{
+        transition: .5;
+        position: absolute;
+        width: .2rem;
+        height: 3rem;
+        background-color:$black-color;
+        top: 1rem;
+        opacity: .7;
+        box-shadow: 0 35rem 0 $black-color;
+        transform-origin: center;
+        transform: translateX(-50%);
+       
+
+        &::after{
+            
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $black-color;
+            transform-origin: center;
+            transform: translate(14rem,3rem) rotate(45deg);
+            box-shadow: 0rem 40rem 0 $black-color;
+
+        }
+
+    }
+    
+    .clock__number--odd{
+        transition: .5;
+        position: absolute;
+        width: 3rem;
+        height: .2rem;
+        background-color:$black-color;
+        left: 1rem;
+        opacity: .7;
+        box-shadow: 35rem 0  0 $black-color;
+
+        transform-origin: center;
+        transform: translateY(-50%);
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $black-color;
+            transform-origin: center;
+            transform: translate(3rem,-14.5rem) rotate(45deg);
+            box-shadow: 40rem 0rem 0 $black-color;
+
+        }
+    }
+    
+    
+
+    &:hover{
+
+        box-shadow: 1.6rem 1.6rem 2rem hsla($hue-color,30%,86%,1), -0.2rem -0.2rem 1rem $white-color;
+        background-color: hsl($hue-color,24%, 95%);
+
+    }
+
+    .clock__hour{
+        z-index: 1;
+        position: absolute;
+        width: .8rem;
+        height: 7rem;
+        background-color: $first-color;
+        transform-origin: top;
+        transform: translateX(-50%);
+        border-radius: 1rem;
+    }
+
+    .clock__minutes{
+        position: absolute;
+        width: .7rem;
+        height: 10rem;
+        background-color: $black-color;
+        transform-origin: top;
+        transform: translateX(-50%);
+        border-radius: 1rem;
+        
+    }
+    
+    .clock__seconds{
+        position: absolute;
+        width: .5rem;
+        height: 12rem;
+        background-color: $black-color;
+        transform-origin: top;
+        transform: translateX(-50%);
+        border-radius: 1rem;
+        box-shadow: 0 -3rem 0 $black-color;
+    }
+    
+}
+
