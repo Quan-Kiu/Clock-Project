@@ -30,6 +30,7 @@ a {
   position: relative;
   max-width: 144rem;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .container {
