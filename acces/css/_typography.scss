@@ -1,18 +1,16 @@
 .wrapper {
-  position: relative;
   max-width: 144rem;
   margin: 0 auto;
   min-height: 100vh;
 }
 .container {
   position: relative;
-  max-width: 96.8rem + 6rem;
-  padding: 3rem;
+  max-width: 70rem;
+  padding: 3rem 0;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: $background-color;

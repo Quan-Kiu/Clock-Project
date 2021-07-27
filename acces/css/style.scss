@@ -18,6 +18,15 @@ h1 {
 
 p {
   font-size: $medium-font-size;
+  user-select: none;
+  color: $text-color-light;
+}
+
+.logo {
+  font-size: $small-font-size;
+  margin-bottom: 10rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .clock__text {
@@ -30,8 +39,8 @@ p {
   width: 40rem;
   height: 40rem;
 
-  box-shadow: -0.6rem -0.6rem 1.6rem $white-color,
-    0.6rem 0.6rem 1.6rem hsla($hue-color, 30%, 86%, 1),
+  box-shadow: -0.8rem -0.8rem 1.6rem $white-color,
+    0.8rem 0.8rem 1.6rem hsla($hue-color, 30%, 86%, 1),
     inset 0.6rem 0.6rem 1.6rem hsla($hue-color, 30%, 86%, 1),
     inset -0.6rem -0.6rem 1.6rem $white-color;
 
@@ -97,9 +106,9 @@ p {
 
   .clock__icon {
     position: absolute;
-    width: 10%;
-    height: 10%;
-    right: 10rem;
+    width: 15%;
+    height: 15%;
+    right: 8rem;
 
     animation: fadeIn 1s ease forwards;
     i {
@@ -224,12 +233,21 @@ p {
   }
 
   100% {
-    bottom: 20rem;
+    bottom: 18rem;
   }
 }
 
 @media screen and (max-width: 50rem) {
   .clock__content {
-    transform: scale(0.7);
+    transform: scale(0.8);
+  }
+}
+
+html[data-theme="black"] {
+  body {
+    $hue-color: 120;
+    $title-color: hsl($hue-color, 12%, 95%);
+    $text-color: hsl($hue-color, 12%, 75%);
+    $background-color: hsl($hue-color, 10%, 16%);
   }
 }

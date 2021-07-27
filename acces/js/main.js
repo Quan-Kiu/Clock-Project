@@ -12,13 +12,34 @@ day = date.getDate();
 
 month = date.getMonth();
 
+daytext = date.getDay();
+
+let dateMonth = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+let dateDay = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+month = "" + dateMonth[month] + "";
+
+daytext = "" + dateDay[daytext] + "";
+
 year = date.getFullYear();
 
 hh = date.getHours();
 
-hh /= 30;
-
-datetext.innerHTML = "" + day + "/" + month + "/" + year + "";
+datetext.innerHTML = "" + daytext + ", " + day + " " + month + ", " + year + "";
 
 if (hh >= 5 && hh < 18) {
   sun.style.display = "block";

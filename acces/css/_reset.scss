@@ -9,11 +9,12 @@ html {
 }
 
 body {
-  background-color: rgb(115, 13, 218);
-
   font-family: $primary-font;
-
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
   color: $text-color;
+  background-color: $background-color;
 }
 
 a {

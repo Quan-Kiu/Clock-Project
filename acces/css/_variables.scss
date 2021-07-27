@@ -9,18 +9,19 @@ $primary-font: "Poppins", sans-serif;
 $hue-color: 240;
 
 $first-color: hsl($hue-color, 53%, 49%);
-$title-color: hsl($hue-color, 53%, 15%);
-$text-color: hsl($hue-color, 12%, 35%);
 $text-color-light: hsl($hue-color, 12%, 65%);
 $white-color: #fff;
 $black-color: #000;
+
+$title-color: hsl($hue-color, 53%, 15%);
+$text-color: hsl($hue-color, 12%, 35%);
 $background-color: hsl($hue-color, 24%, 94%);
 
 /*========== Font and typography ==========*/
 
 $biggest-font-size: 4.8rem;
 $medium-font-size: 2.5rem;
-$small-font-size: 1.3rem;
+$small-font-size: 2rem;
 $smaller-font-size: 1.2rem;
 $tiny-font-size: 1rem;
 
